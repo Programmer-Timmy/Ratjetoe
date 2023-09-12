@@ -8,13 +8,13 @@ $customers = customers::getAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ratjetoe - customers</title>
+    <title>Ratjetoe - Customers</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Ratjetoe</a>
+    <a class="navbar-brand" href="customer">Ratjetoe</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,7 +25,7 @@ $customers = customers::getAll();
                 <a class="nav-link" href="customer">Customers<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="addCustomers">Add Customers</a>
+                <a class="nav-link" href="addCustomer">Add Customers</a>
             </li>
         </ul>
         <div class="my-2 my-lg-0">
@@ -34,9 +34,9 @@ $customers = customers::getAll();
     </div>
 </nav>
 
-<div class="container mt-4">
+<div class="mt-4" style="padding: 20px">
     <span class="d-flex justify-content-between align-items-center">
-        <h1>Klanten</h1>
+        <h1>Customers</h1>
         <a href="addCustomer" class="btn btn-primary">+ Toevoegen</a>
     </span>
     <div class="table-responsive mt-4">
@@ -45,7 +45,7 @@ $customers = customers::getAll();
             <tr>
                 <th scope="col">Firstname</th>
                 <th scope="col">Lastname</th>
-                <th scope="col">E-mail</th>
+                <th scope="col">Email</th>
                 <th scope="col">Premium</th>
                 <th scope="col">Country</th>
                 <th scope="col">number of games</th>
@@ -71,7 +71,7 @@ $customers = customers::getAll();
                             <div class='dropdown-menu'>
                                 <a class='dropdown-item' href='games/?id=" . $customer['id'] . "'>Show games</a>
                                 <a class='dropdown-item' href='?delete=" . $customer['id'] ."'>delete</a>
-                                <a class='dropdown-item' href='editCustomer'>edit</a>
+                                <a class='dropdown-item' href='editCustomer/?id=" . $customer['id'] . "'>edit</a>
                             </div>
                         </div>
                     </td>
