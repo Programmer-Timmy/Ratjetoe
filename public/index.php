@@ -7,7 +7,7 @@ require_once "../private/autoloader.php";
 require_once "../private/settings.php";
 
 $filename = substr($_SERVER['REDIRECT_URL'], 1);
-if ($filename == '' or !isset($_SESSION['user'])) {
+if ($filename == '' or !isset($_SESSION['user']) or $filename !== 'mail') {
     $filename = 'home';
 }
 

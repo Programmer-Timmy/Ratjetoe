@@ -20,4 +20,30 @@ class games
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public static function add($customer_id, $game_id){
+        global $conn;
+        $stmt = $conn->prepare("INSERT INTO customer_game (customer_id, game_id) VALUES (?,?)");
+        $stmt->bindValue(1, $customer_id);
+        $stmt->bindValue(2, $game_id);
+
+        $stmt->execute();
+    }
+
+    public static function delete($type_id, $id){
+        global $conn;
+        $stmt = $conn->prepare("DELETE FROM customer_game WHERE $type_id= ?");
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+    }
+
+    public static function send($id){
+
+
+
+
+        require 'path/to/PHPMailer/src/Exception.php';
+        require 'path/to/PHPMailer/src/PHPMailer.php';
+        require 'path/to/PHPMailer/src/SMTP.php';
+    }
 }

@@ -1,6 +1,10 @@
 <?php
 $customers = customers::getAll();
 
+if (isset($_GET['delete'])){
+    customers::delete($_GET['delete']);
+    header('location: customer');
+}
 ?>
 
 <!DOCTYPE html>
@@ -70,8 +74,10 @@ $customers = customers::getAll();
                             </button>
                             <div class='dropdown-menu'>
                                 <a class='dropdown-item' href='games/?id=" . $customer['id'] . "'>Show games</a>
-                                <a class='dropdown-item' href='?delete=" . $customer['id'] ."'>delete</a>
-                                <a class='dropdown-item' href='editCustomer/?id=" . $customer['id'] . "'>edit</a>
+                                <a class='dropdown-item' href='?delete=" . $customer['id'] ."'>Delete</a>
+                                <a class='dropdown-item' href='editCustomer/?id=" . $customer['id'] . "'>Edit</a>
+                                <a class='dropdown-item' href='sendEmail/?id=" . $customer['id'] . "'>Send email</a>
+                                
                             </div>
                         </div>
                     </td>

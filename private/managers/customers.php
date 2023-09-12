@@ -33,4 +33,15 @@ class customers
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public static function delete($id){
+        games::delete('customer_id', $id);
+
+        global $conn;
+        $stmt = $conn->prepare("DELETE FROM customer WHERE id= ?");
+        $stmt->bindValue(1, $id);
+
+        $stmt->execute();
+
+    }
 }
