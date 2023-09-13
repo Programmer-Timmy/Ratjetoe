@@ -6,15 +6,14 @@ use PHPMailer\PHPMailer\Exception;
 require '../private/PHPmailer/Exception.php';
 require '../private/PHPmailer/PHPMailer.php';
 require '../private/PHPmailer/SMTP.php';
+require_once '../private/settings.php';
+
 class email
 {
-    public static function send($id){
-        require_once '../private/settings.php';
+    public static function send($id, $htmlcontent){
         global $host, $username, $password, $port;
         $customer_games = games::get($id);
         $customer = customers::get($id);
-
-
 
         $mail = new PHPMailer(true);
 
@@ -36,8 +35,8 @@ class email
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Your games Overview';
-            $mail->Body    = '<img src="http://ratjetoe/mail?id='. $id.'" alt="" />';
-            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->Body    = $htmlcontent;
+            $mail->AltBody = 'Sorry but mail does not suport HTML';
 
             $mail->send();
             echo 'Message has been sent';
