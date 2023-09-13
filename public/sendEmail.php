@@ -1,6 +1,7 @@
 <?php
-    $customer_games = games::get($id);
-    $customer = customers::get($id);
+
+$customer_games = games::get($_GET['id']);
+$customer = customers::get($_GET['id']);
     
 $htmlContent = '
 <!DOCTYPE html>
@@ -82,4 +83,4 @@ $htmlContent .= '
 
 email::send($_GET['id'], $htmlContent);
 
-?>
+header('location: customer');

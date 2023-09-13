@@ -1,16 +1,19 @@
 <?php
+$debug = true;
 
 /**
  * Email Server settings
  */
-
-$host = 'smtp.strato.com';
-$username = 'student@ictcampus.nl';
-$password = 'N13tSp@mmen';
-$port = 456;
-
-$debug = true;
-
+class settings{
+    public static function settings(){
+        return [
+            'host' => 'smtp.strato.com',
+            'username' => 'student@ictcampus.nl',
+            'password' => 'N13tSp@mmen',
+            'port' => 465,
+        ];
+    }
+}
 if (!$debug) {
     error_reporting(E_ALL ^ E_DEPRECATED);
     error_reporting(E_ERROR | E_PARSE);

@@ -6,27 +6,24 @@ use PHPMailer\PHPMailer\Exception;
 require '../private/PHPmailer/Exception.php';
 require '../private/PHPmailer/PHPMailer.php';
 require '../private/PHPmailer/SMTP.php';
-require_once '../private/settings.php';
-
 class email
 {
     public static function send($id, $htmlcontent){
-        global $host, $username, $password, $port;
-        $customer_games = games::get($id);
         $customer = customers::get($id);
-
+        $settings = settings::settings();
         $mail = new PHPMailer(true);
 
         try {
             //Server settings
 //            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp.strato.com';                     //Set the SMTP server to send through
+            $mail->Host       = $settings['host'];                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'student@ictcampus.nl';                     //SMTP username
-            $mail->Password   = 'N13tSp@mmen';                               //SMTP password
+            $mail->Username   = $settings['username'];                     //SMTP username
+            $mail->Password   = $settings['password'];                               //SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->Port       = $settings['port'];                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
             $mail->setFrom('student@ictcampus.n', 'Ratjetoe');
