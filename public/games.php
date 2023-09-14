@@ -43,7 +43,7 @@ if (isset($_GET['delete'])) {
             </li>
         </ul>
         <div class="my-2 my-lg-0">
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+            <a href="logout" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</a>
         </div>
     </div>
 </nav>
