@@ -19,7 +19,7 @@
  * FITNESS FOR A PARTICULAR PURPOSE.
  */
 
-namespace PHPMailer\PHPMailer;
+namespace static\PHPmailer;
 
 use function array_keys;
 use const PHP_VERSION_ID;

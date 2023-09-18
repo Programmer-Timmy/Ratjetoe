@@ -19,7 +19,7 @@
  * FITNESS FOR A PARTICULAR PURPOSE.
  */
 
-namespace PHPMailer\PHPMailer;
+namespace static\PHPmailer;
 
 use Psr\Log\LoggerInterface;
 use const IDNA_CHECK_BIDI;
