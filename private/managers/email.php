@@ -1,11 +1,12 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use static\PHPmailer\Exception;
+use static\PHPmailer\PHPMailer;
 
-require '../private/PHPmailer/Exception.php';
-require '../private/PHPmailer/PHPMailer.php';
-require '../private/PHPmailer/SMTP.php';
+require '../static/PHPmailer/Exception.php';
+require '../static/PHPmailer/PHPMailer.php';
+require '../static/PHPmailer/SMTP.php';
+include '../static/settings.php';
 class email
 {
     public static function send($id, $htmlcontent){

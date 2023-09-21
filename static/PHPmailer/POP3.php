@@ -19,7 +19,7 @@
  * FITNESS FOR A PARTICULAR PURPOSE.
  */
 
-namespace PHPMailer\PHPMailer;
+namespace static\PHPmailer;
 
 /**
  * PHPMailer POP-Before-SMTP Authentication Class.
