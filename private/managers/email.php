@@ -6,7 +6,7 @@ use static\PHPmailer\PHPMailer;
 require '../static/PHPmailer/Exception.php';
 require '../static/PHPmailer/PHPMailer.php';
 require '../static/PHPmailer/SMTP.php';
-include '../static/settings.php';
+include '/static/settings.php';
 class email
 {
     public static function send($id, $htmlcontent){

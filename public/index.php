@@ -4,7 +4,7 @@ $conn = new PDO("mysql:host=localhost;dbname=ratjetoe", 'root', '');
 session_start();
 
 require_once "../private/autoloader.php";
-require_once "../private/settings.php";
+require_once "../static/settings.php";
 
 $filename = substr($_SERVER['REDIRECT_URL'], 1);
 if ($filename == '' or !isset($_SESSION['user'])) {
