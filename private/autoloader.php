@@ -5,8 +5,8 @@ spl_autoload_register(function ($className) {
     $classFile = str_replace($baseNamespace, '', $className);
     $classFile = str_replace('\\', '/', $classFile);
 
-        $filePath = 'managers/' . $classFile . '.php';
+    $filePath = 'managers/' . $classFile . '.php';
 
-        require_once $filePath;
+    require_once $filePath;
 
 });

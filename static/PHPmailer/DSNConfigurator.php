@@ -208,12 +208,12 @@ class DSNConfigurator
                 case 'UseSendmailOptions':
                 case 'do_verp':
                 case 'DKIM_copyHeaderFields':
-                $mailer->$key = (bool)$value;
+                    $mailer->$key = (bool)$value;
                     break;
                 case 'Priority':
                 case 'SMTPDebug':
                 case 'WordWrap':
-                $mailer->$key = (int)$value;
+                    $mailer->$key = (int)$value;
                     break;
                 default:
                     $mailer->$key = $value;

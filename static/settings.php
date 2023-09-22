@@ -4,8 +4,10 @@ $debug = false;
 /**
  * Email Server settings
  */
-class settings{
-    public static function settings(){
+class settings
+{
+    public static function settings()
+    {
         return [
             'host' => 'smtp.strato.com',
             'username' => 'student@ictcampus.nl',
@@ -14,6 +16,7 @@ class settings{
         ];
     }
 }
+
 if (!$debug) {
     error_reporting(E_ALL ^ E_DEPRECATED);
     error_reporting(E_ERROR | E_PARSE);

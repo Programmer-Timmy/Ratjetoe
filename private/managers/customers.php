@@ -2,7 +2,8 @@
 
 class customers
 {
-    public static function getAll(){
+    public static function getAll()
+    {
         global $conn;
         $stmt = $conn->prepare("select customer.id,firstname,lastname,email,premium_member,name as country, (SELECT count(*) FROM customer_game where customer.id = customer_game.customer_id) as games  FROM customer join country on customer.country_id=country.id");
 
@@ -11,7 +12,8 @@ class customers
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public static function add($firstname, $lastname, $email, $countryId, $premiumMember = 0){
+    public static function add($firstname, $lastname, $email, $countryId, $premiumMember = 0)
+    {
         global $conn;
         $stmt = $conn->prepare("INSERT INTO customer (firstname, lastname, email, premium_member, country_id) VALUES (?,?,?,?,?)");
         $stmt->bindValue(1, htmlspecialchars($firstname));
@@ -24,7 +26,8 @@ class customers
         $stmt->execute();
     }
 
-    public static function get($id){
+    public static function get($id)
+    {
         global $conn;
         $stmt = $conn->prepare("select firstname,lastname,email,premium_member,country_id FROM customer where customer.id = ?");
         $stmt->bindValue(1, $id);
@@ -34,7 +37,8 @@ class customers
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public static function delete($id){
+    public static function delete($id)
+    {
         games::delete('customer_id', $id);
 
         global $conn;

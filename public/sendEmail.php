@@ -2,7 +2,7 @@
 
 $customer_games = games::get($_GET['id']);
 $customer = customers::get($_GET['id']);
-    
+
 $htmlContent = '
 <!DOCTYPE html>
 <html lang="en">

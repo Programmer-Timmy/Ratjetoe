@@ -2,7 +2,8 @@
 
 class country
 {
-    public static function getAll(){
+    public static function getAll()
+    {
         global $conn;
         $stmt = $conn->prepare("select * FROM country");
 

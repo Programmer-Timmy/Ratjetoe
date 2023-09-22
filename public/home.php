@@ -1,7 +1,7 @@
 <?php
-    if ($_POST){
-        user::login($_POST['email'], $_POST['password']);
-    }
+if ($_POST) {
+    user::login($_POST['email'], $_POST['password']);
+}
 ?>
 
 <!DOCTYPE html>

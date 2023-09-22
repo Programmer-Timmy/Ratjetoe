@@ -7,9 +7,11 @@
 -- Serverversie: 5.7.36
 -- PHP-versie: 8.2.6
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET
+SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET
+time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -20,8 +22,10 @@ SET time_zone = "+00:00";
 --
 -- Database: `ratjetoe`
 --
-CREATE DATABASE IF NOT EXISTS `ratjetoe` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `ratjetoe`;
+CREATE
+DATABASE IF NOT EXISTS `ratjetoe` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE
+`ratjetoe`;
 
 -- --------------------------------------------------------
 
@@ -30,72 +34,82 @@ USE `ratjetoe`;
 --
 
 DROP TABLE IF EXISTS `country`;
-CREATE TABLE IF NOT EXISTS `country` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=253 DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `country`
+(
+    `id` int
+(
+    11
+) NOT NULL AUTO_INCREMENT,
+    `name` varchar
+(
+    45
+) NOT NULL,
+    PRIMARY KEY
+(
+    `id`
+)
+    ) ENGINE=InnoDB AUTO_INCREMENT=253 DEFAULT CHARSET=utf8;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `country`
 --
 
-INSERT INTO `country` (`id`, `name`) VALUES
-(1, 'Afghanistan'),
-(2, 'Aland Islands'),
-(3, 'Albania'),
-(4, 'Algeria'),
-(5, 'American Samoa'),
-(6, 'Andorra'),
-(7, 'Angola'),
-(8, 'Anguilla'),
-(9, 'Antarctica'),
-(10, 'Antigua and Barbuda'),
-(11, 'Argentina'),
-(12, 'Armenia'),
-(13, 'Aruba'),
-(14, 'Australia'),
-(15, 'Austria'),
-(16, 'Azerbaijan'),
-(17, 'Bahamas'),
-(18, 'Bahrain'),
-(19, 'Bangladesh'),
-(20, 'Barbados'),
-(21, 'Belarus'),
-(22, 'Belgium'),
-(23, 'Belize'),
-(24, 'Benin'),
-(25, 'Bermuda'),
-(26, 'Bhutan'),
-(27, 'Bolivia'),
-(28, 'Bonaire, Sint Eustatius and Saba'),
-(29, 'Bosnia and Herzegovina'),
-(30, 'Botswana'),
-(31, 'Bouvet Island'),
-(32, 'Brazil'),
-(33, 'British Indian Ocean Territory'),
-(34, 'Brunei Darussalam'),
-(35, 'Bulgaria'),
-(36, 'Burkina Faso'),
-(37, 'Burundi'),
-(38, 'Cambodia'),
-(39, 'Cameroon'),
-(40, 'Canada'),
-(41, 'Cape Verde'),
-(42, 'Cayman Islands'),
-(43, 'Central African Republic'),
-(44, 'Chad'),
-(45, 'Chile'),
-(46, 'China'),
-(47, 'Christmas Island'),
-(48, 'Cocos (Keeling) Islands'),
-(49, 'Colombia'),
-(50, 'Comoros'),
-(51, 'Congo'),
-(52, 'Congo, Democratic Republic of the Congo'),
-(53, 'Cook Islands'),
-(54, 'Costa Rica'),
-(55, 'Cote D\'Ivoire'),
+INSERT INTO `country` (`id`, `name`)
+VALUES (1, 'Afghanistan'),
+       (2, 'Aland Islands'),
+       (3, 'Albania'),
+       (4, 'Algeria'),
+       (5, 'American Samoa'),
+       (6, 'Andorra'),
+       (7, 'Angola'),
+       (8, 'Anguilla'),
+       (9, 'Antarctica'),
+       (10, 'Antigua and Barbuda'),
+       (11, 'Argentina'),
+       (12, 'Armenia'),
+       (13, 'Aruba'),
+       (14, 'Australia'),
+       (15, 'Austria'),
+       (16, 'Azerbaijan'),
+       (17, 'Bahamas'),
+       (18, 'Bahrain'),
+       (19, 'Bangladesh'),
+       (20, 'Barbados'),
+       (21, 'Belarus'),
+       (22, 'Belgium'),
+       (23, 'Belize'),
+       (24, 'Benin'),
+       (25, 'Bermuda'),
+       (26, 'Bhutan'),
+       (27, 'Bolivia'),
+       (28, 'Bonaire, Sint Eustatius and Saba'),
+       (29, 'Bosnia and Herzegovina'),
+       (30, 'Botswana'),
+       (31, 'Bouvet Island'),
+       (32, 'Brazil'),
+       (33, 'British Indian Ocean Territory'),
+       (34, 'Brunei Darussalam'),
+       (35, 'Bulgaria'),
+       (36, 'Burkina Faso'),
+       (37, 'Burundi'),
+       (38, 'Cambodia'),
+       (39, 'Cameroon'),
+       (40, 'Canada'),
+       (41, 'Cape Verde'),
+       (42, 'Cayman Islands'),
+       (43, 'Central African Republic'),
+       (44, 'Chad'),
+       (45, 'Chile'),
+       (46, 'China'),
+       (47, 'Christmas Island'),
+       (48, 'Cocos (Keeling) Islands'),
+       (49, 'Colombia'),
+       (50, 'Comoros'),
+       (51, 'Congo'),
+       (52, 'Congo, Democratic Republic of the Congo'),
+       (53, 'Cook Islands'),
+       (54, 'Costa Rica'),
+       (55, 'Cote D\'Ivoire'),
 (56, 'Croatia'),
 (57, 'Cuba'),
 (58, 'Curacao'),
@@ -159,11 +173,11 @@ INSERT INTO `country` (`id`, `name`) VALUES
 (116, 'Kenya'),
 (117, 'Kiribati'),
 (118, 'Korea, Democratic People\'s Republic of'),
-(119, 'Korea, Republic of'),
-(120, 'Kosovo'),
-(121, 'Kuwait'),
-(122, 'Kyrgyzstan'),
-(123, 'Lao People\'s Democratic Republic'),
+       (119, 'Korea, Republic of'),
+       (120, 'Kosovo'),
+       (121, 'Kuwait'),
+       (122, 'Kyrgyzstan'),
+       (123, 'Lao People\'s Democratic Republic'),
 (124, 'Latvia'),
 (125, 'Lebanon'),
 (126, 'Lesotho'),
@@ -288,11 +302,11 @@ INSERT INTO `country` (`id`, `name`) VALUES
 (245, 'Viet Nam'),
 (246, 'Virgin Islands, British'),
 (247, 'Virgin Islands, U.s.'),
-(248, 'Wallis and Futuna'),
-(249, 'Western Sahara'),
-(250, 'Yemen'),
-(251, 'Zambia'),
-(252, 'Zimbabwe');
+(248, ' Wallis and Futuna '),
+(249, ' Western Sahara '),
+(250, ' Yemen '),
+(251, ' Zambia '),
+(252, ' Zimbabwe ');
 
 -- --------------------------------------------------------
 
@@ -317,8 +331,8 @@ CREATE TABLE IF NOT EXISTS `customer` (
 --
 
 INSERT INTO `customer` (`id`, `firstname`, `lastname`, `email`, `premium_member`, `country_id`) VALUES
-(1, 'tim', 'van der kloet', 'tim.vanderkloet@gmail.com', 0, 158),
-(3, 'jan', 'pietje', 'jan@pietje', 0, 83);
+(1, ' tim ', ' van der kloet ', ' tim.vanderkloet@gmail.com ', 0, 158),
+(3, ' jan ', ' pietje ', ' jan@pietje ', 0, 83);
 
 -- --------------------------------------------------------
 
@@ -368,28 +382,28 @@ CREATE TABLE IF NOT EXISTS `game` (
 --
 
 INSERT INTO `game` (`id`, `name`, `platform_id`) VALUES
-(1, 'The Witcher 3: Wild Hunt', 1),
-(2, 'Minecraft', 2),
-(3, 'Among Us', 3),
-(4, 'Angry Birds', 4),
-(5, 'Candy Crush Saga', 5),
-(6, 'Demon\'s Souls', 6),
-(7, 'Halo Infinite', 7),
-(8, 'The Legend of Zelda: Breath of the Wild', 8),
-(9, 'Red Dead Redemption 2', 9),
-(10, 'Gears 5', 10),
-(11, 'Super Mario 64', 11),
-(12, 'The Legend of Zelda: A Link to the Past', 12),
-(13, 'Grand Theft Auto V', 1),
-(14, 'Overwatch', 2),
-(15, 'Counter-Strike: Global Offensive', 1),
-(16, 'Fortnite', 7),
-(17, 'FIFA 22', 9),
-(18, 'The Elder Scrolls V: Skyrim', 1),
-(19, 'Call of Duty: Warzone', 10),
-(20, 'Animal Crossing: New Horizons', 8),
-(21, 'Super Mario World', 12),
-(22, 'Final Fantasy VII', 6);
+(1, ' The Witcher 3: Wild Hunt ', 1),
+(2, ' Minecraft ', 2),
+(3, ' Among Us ', 3),
+(4, ' Angry Birds ', 4),
+(5, ' Candy Crush Saga ', 5),
+(6, ' Demon\'s Souls', 6),
+       (7, 'Halo Infinite', 7),
+       (8, 'The Legend of Zelda: Breath of the Wild', 8),
+       (9, 'Red Dead Redemption 2', 9),
+       (10, 'Gears 5', 10),
+       (11, 'Super Mario 64', 11),
+       (12, 'The Legend of Zelda: A Link to the Past', 12),
+       (13, 'Grand Theft Auto V', 1),
+       (14, 'Overwatch', 2),
+       (15, 'Counter-Strike: Global Offensive', 1),
+       (16, 'Fortnite', 7),
+       (17, 'FIFA 22', 9),
+       (18, 'The Elder Scrolls V: Skyrim', 1),
+       (19, 'Call of Duty: Warzone', 10),
+       (20, 'Animal Crossing: New Horizons', 8),
+       (21, 'Super Mario World', 12),
+       (22, 'Final Fantasy VII', 6);
 
 -- --------------------------------------------------------
 
@@ -398,29 +412,39 @@ INSERT INTO `game` (`id`, `name`, `platform_id`) VALUES
 --
 
 DROP TABLE IF EXISTS `platform`;
-CREATE TABLE IF NOT EXISTS `platform` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `platform`
+(
+    `id` int
+(
+    11
+) NOT NULL AUTO_INCREMENT,
+    `name` varchar
+(
+    45
+) NOT NULL,
+    PRIMARY KEY
+(
+    `id`
+)
+    ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `platform`
 --
 
-INSERT INTO `platform` (`id`, `name`) VALUES
-(1, 'Windows'),
-(2, 'macOS'),
-(3, 'Linux'),
-(4, 'iOS'),
-(5, 'Android'),
-(6, 'PlayStation 5'),
-(7, 'Xbox Series X/S'),
-(8, 'Nintendo Switch'),
-(9, 'PlayStation 4'),
-(10, 'Xbox One'),
-(11, 'Nintendo 64'),
-(12, 'Super Nintendo Entertainment System (SNES)');
+INSERT INTO `platform` (`id`, `name`)
+VALUES (1, 'Windows'),
+       (2, 'macOS'),
+       (3, 'Linux'),
+       (4, 'iOS'),
+       (5, 'Android'),
+       (6, 'PlayStation 5'),
+       (7, 'Xbox Series X/S'),
+       (8, 'Nintendo Switch'),
+       (9, 'PlayStation 4'),
+       (10, 'Xbox One'),
+       (11, 'Nintendo 64'),
+       (12, 'Super Nintendo Entertainment System (SNES)');
 
 -- --------------------------------------------------------
 
@@ -429,19 +453,32 @@ INSERT INTO `platform` (`id`, `name`) VALUES
 --
 
 DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(45) NOT NULL,
-  `password_hash` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `user`
+(
+    `id` int
+(
+    11
+) NOT NULL AUTO_INCREMENT,
+    `email` varchar
+(
+    45
+) NOT NULL,
+    `password_hash` varchar
+(
+    100
+) NOT NULL,
+    PRIMARY KEY
+(
+    `id`
+)
+    ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `user`
 --
 
-INSERT INTO `user` (`id`, `email`, `password_hash`) VALUES
-(1, 'root@gmail.com', '$2y$10$XOWhFK6HP4Uie9I4crZRV.om1D.3cLPJ44rgQBxBzSxsIAjlhWYgi');
+INSERT INTO `user` (`id`, `email`, `password_hash`)
+VALUES (1, 'root@gmail.com', '$2y$10$XOWhFK6HP4Uie9I4crZRV.om1D.3cLPJ44rgQBxBzSxsIAjlhWYgi');
 
 --
 -- Beperkingen voor geëxporteerde tabellen
@@ -451,20 +488,22 @@ INSERT INTO `user` (`id`, `email`, `password_hash`) VALUES
 -- Beperkingen voor tabel `customer`
 --
 ALTER TABLE `customer`
-  ADD CONSTRAINT `fk_customer_country` FOREIGN KEY (`country_id`) REFERENCES `country` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ADD CONSTRAINT `fk_customer_country` FOREIGN KEY (`country_id`) REFERENCES `country` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Beperkingen voor tabel `customer_game`
 --
 ALTER TABLE `customer_game`
-  ADD CONSTRAINT `fk_customer_game_customer1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_customer_game_game1` FOREIGN KEY (`game_id`) REFERENCES `game` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ADD CONSTRAINT `fk_customer_game_customer1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_customer_game_game1` FOREIGN KEY (`game_id`) REFERENCES `game` (`id`) ON
+DELETE
+NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Beperkingen voor tabel `game`
 --
 ALTER TABLE `game`
-  ADD CONSTRAINT `fk_game_platform1` FOREIGN KEY (`platform_id`) REFERENCES `platform` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+    ADD CONSTRAINT `fk_game_platform1` FOREIGN KEY (`platform_id`) REFERENCES `platform` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
