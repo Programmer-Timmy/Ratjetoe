@@ -37,7 +37,7 @@ if($_POST){
             </li>
         </ul>
         <div class="my-2 my-lg-0">
-            <a href="logout" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</a>
+            <a href="logout" class="text-warning my-2 my-sm-0" type="submit">Logout</a>
         </div>
     </div>
 </nav>
